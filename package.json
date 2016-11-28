@@ -1,0 +1,23 @@
+{
+  "name": "webpack-sample",
+  "version": "0.1.0",
+  "description": "webpack sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzy321/webpack-sample.git"
+  },
+  "keywords": [
+    "webpack",
+    "sample"
+  ],
+  "author": "wy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzy321/webpack-sample/issues"
+  },
+  "homepage": "https://github.com/dzy321/webpack-sample#readme"
+}
