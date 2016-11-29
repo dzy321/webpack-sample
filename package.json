@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/dzy321/webpack-sample/issues"
   },
-  "homepage": "https://github.com/dzy321/webpack-sample#readme"
+  "homepage": "https://github.com/dzy321/webpack-sample#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
