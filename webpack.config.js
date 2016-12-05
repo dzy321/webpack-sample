@@ -1,30 +1,30 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
 module.exports = {
   devtool: 'source-map',
-  entry: __dirname + "/main.js",
+  entry: path.resolve(__dirname, 'app/index.jsx'),
   output: {
-    path: __dirname + "/public",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
-        test: /\.json$/,
-        loader: "json"
+        test: /\.(js|jsx)$/,
+        loaders: ['babel-loader'],
+        include: path.resolve(__dirname, 'app')
       }
     ]
   },
-  devServer: {
-    contentBase: "./public",//本地服务器所加载的页面所在的目录
-    port: 3000,
-    colors: true,//终端中输出结果为彩色
-    historyApiFallback: true,//不跳转
-    inline: true//实时刷新
+  resolve: {
+    modulesDirectories: ['node_modules', 'app'],
+    extensions: ['', '.js', '.jsx']
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: './index.html' },
-    ])
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './app/views/index.ejs',
+    })
   ]
 }
