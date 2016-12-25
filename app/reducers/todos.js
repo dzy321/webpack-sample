@@ -20,7 +20,7 @@ const todo = (state, action) => {
   }
 }
 
-const todos = (state = [], action) => {
+export const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -36,4 +36,14 @@ const todos = (state = [], action) => {
   }
 }
 
-export default todos
+
+export const error = (state = '', action) => {
+  switch (action.type) {
+    case 'REQUEST_ERROR':
+      return action.text
+    case 'REQUEST_SUCCESS':
+      return ''
+    default:
+      return state
+  }
+}

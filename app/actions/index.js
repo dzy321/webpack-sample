@@ -1,4 +1,12 @@
 let nextTodoId = 0
+
+export const verifyToDo = (text) => {
+  return {
+    type: 'VERIFY_TODO',
+    text
+  }
+}
+
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
