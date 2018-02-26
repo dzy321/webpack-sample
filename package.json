@@ -4,7 +4,8 @@
   "description": "webpack sample",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && babel-node server"
+    "start": "webpack && babel-node server",
+    "build": "parcel ./app/views/index.html"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "dependencies": {
     "babel-polyfill": "^6.20.0",
     "koa": "^2.0.0",
+    "koa-bodyparser": "^3.1.0",
     "koa-serve": "^0.1.7",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
@@ -43,6 +45,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.6.0",
     "html-webpack-plugin": "^2.24.1",
+    "parcel-bundler": "^1.6.2",
     "webpack": "^1.13.3"
   }
 }
